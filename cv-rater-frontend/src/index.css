@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles and design system */
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen text-white;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl;
+  }
+  
+  /* Gradient button */
+  .gradient-btn {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 
+           text-white font-semibold py-3 px-6 rounded-xl shadow-lg
+           transition-all duration-300 ease-in-out transform hover:scale-105;
+  }
+  
+  /* Score circle animations */
+  .score-circle {
+    @apply transition-all duration-1000 ease-out;
+  }
+  
+  /* Animated gradient background */
+  .animated-gradient {
+    @apply bg-gradient-to-br from-primary-500/20 via-secondary-500/20 to-accent-500/20 animate-pulse-slow;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-white/5 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary-500/50 rounded-full hover:bg-primary-500;
+  }
+}
